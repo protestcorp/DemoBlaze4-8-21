@@ -1,4 +1,4 @@
-activeProfiles=vvvcucumber-starter
+activeProfiles=Demo-cucumber-starter
 eclipse.preferences.version=1
-resolveWorkspaceProjects=false
+resolveWorkspaceProjects=true
 version=1

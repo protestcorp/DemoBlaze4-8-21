@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 //import org.openqa.selenium.WebDriver;
 
@@ -35,6 +36,7 @@ import net.serenitybdd.core.Serenity;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
+import net.thucydides.core.annotations.Pending;
 import net.thucydides.core.annotations.Screenshots;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.Steps;
@@ -86,6 +88,7 @@ public class StepDefnition extends ActionUtilities {
 	
 	@When("^User register into application with username and password$")
 	//@Screenshots(afterEachStep=true)
+	@Pending
 	public void user_register_into_application_with_username_and_password() throws Exception {
 
 		DataXMLHandler A1 = new DataXMLHandler();
@@ -99,18 +102,19 @@ public class StepDefnition extends ActionUtilities {
 		Serenity.takeScreenshot();
 	}
 	
-	//@Screenshots(afterEachStep=true)
+	
+	@Pending
 	 public void checkSignIn(String username, String password) throws Exception {
 		
 		SignUpPage su = new SignUpPage(driver);
 		
 		logger.info("Sign-in started");
-
+		
 		su.ClickOnSignupLink();
 		logger.info("sign-up link is clicked");
 		Serenity.takeScreenshot();
 		
-
+	
 		su.ClickOnSignupUsernameTextbox();
 		
 		logger.info("sign-up username is clicked");
@@ -157,6 +161,7 @@ public class StepDefnition extends ActionUtilities {
 	}
 
 	
+	@Pending
 
 	 private String getDate() {
 
@@ -168,6 +173,8 @@ public class StepDefnition extends ActionUtilities {
 	
 	@When("^User login with username and password$")
 	//@Screenshots(afterEachStep=true)
+	@Pending
+
 	public void user_login_with_username_and_password() throws Exception {
 
 		DataXMLHandler A1 = new DataXMLHandler();
@@ -180,6 +187,9 @@ public class StepDefnition extends ActionUtilities {
 	}
 
 	//@Screenshots(afterEachStep=true)
+	//@Ignored
+	@Pending
+
 	 public void checkLogIn(String username, String password) throws Exception {
 
 		LogInPage lo = new LogInPage(driver);
@@ -513,12 +523,14 @@ public class StepDefnition extends ActionUtilities {
 
 	}
 	
-	@Given("^Initialize browserrr $")
+	@Given("Initialize browserrr ")
     public void initialize_browserrr() throws IOException, InterruptedException {
 		//driver = initializeDriver();
 		Serenity.takeScreenshot();
 
     logger.info("Browser is initialized");
+    throw new io.cucumber.java.PendingException();
+
 	}
 
 

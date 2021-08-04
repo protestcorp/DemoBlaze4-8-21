@@ -8,6 +8,7 @@ import Actions.ActionUtilities;
 import CucumberOptionsss.DataXMLHandler;
 import CucumberOptionsss.PageObjectHandler;
 import net.thucydides.core.annotations.Managed;
+import net.thucydides.core.annotations.Pending;
 
 public class LogInPage  extends ActionUtilities {
 	
@@ -21,6 +22,8 @@ public class LogInPage  extends ActionUtilities {
 			this.driver = driver;
 			PageFactory.initElements(driver, this);
 		}
+
+
 
 		public void ClickOnLogInLink()
 		{

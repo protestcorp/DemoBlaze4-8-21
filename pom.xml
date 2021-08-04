@@ -11,7 +11,6 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <webdriver.driver>firefox</webdriver.driver>
         <serenity.version>2.4.24</serenity.version>
         <serenity.maven.version>2.4.24</serenity.maven.version>
         <serenity.cucumber.version>2.4.24</serenity.cucumber.version>
@@ -32,12 +31,6 @@
             <version>${serenity.cucumber.version}</version>
             <scope>test</scope>
         </dependency>
-         <dependency>
-            <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-ensure</artifactId>
-            <version>${serenity.version}</version>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-screenplay</artifactId>
@@ -50,7 +43,12 @@
             <version>${serenity.version}</version>
             <scope>test</scope>
         </dependency>
-       
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-ensure</artifactId>
+            <version>${serenity.version}</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -68,7 +66,7 @@
             <version>3.6.2</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.googlecode.lambdaj/lambdaj -->
+         <!-- https://mvnrepository.com/artifact/com.googlecode.lambdaj/lambdaj -->
 <dependency>
     <groupId>com.googlecode.lambdaj</groupId>
     <artifactId>lambdaj</artifactId>
@@ -149,18 +147,11 @@
     <artifactId>cucumber-testng</artifactId>
     <version>6.10.3</version>
 </dependency>
-        
-        
-        
-        
-        
-        
-        
     </dependencies>
     <build>
         <plugins>
         
-        <plugin>
+         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
         </plugin>
@@ -191,33 +182,25 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
-        
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
-              
-     <configuration>
-              
+                <configuration>
+                
                 </configuration>
-       
-               
-               
             </plugin>
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
                     <includes>
-                
-                        <include>**/TestRunner</include>
-                   
+                                                <include>**/TestRunner</include>
+                        
                     </includes>
-                     <argLine>-Xmx512m</argLine>
                     <systemPropertyVariables>
-                        <webdriver.driver>${webdriver.driver}</webdriver.driver>
+                        <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
                     </systemPropertyVariables>
-                  
                     <parallel>classes</parallel>
                     <parallel>methods</parallel>
                     <useUnlimitedThreads>true</useUnlimitedThreads>
@@ -247,7 +230,13 @@
                 <configuration>
                     <tags>${tags}</tags>
                 </configuration>
-               
+                <dependencies>
+                    <dependency>
+                        <groupId>net.serenity-bdd</groupId>
+                        <artifactId>serenity-core</artifactId>
+                        <version>${serenity.version}</version>
+                    </dependency>
+                </dependencies>
                 <executions>
                     <execution>
                         <id>serenity-reports</id>
