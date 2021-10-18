@@ -12,7 +12,7 @@ Given Initializee browser
 And launching urll 
 When User login with Credentials and purchase a product
 
-Scenario: To verify invalid user credentials
-Given Initialize browserrr 
-And launching urlll 
-When User register into application with username and passworddd
+//Scenario: To verify invalid user credentials
+//Given Initialize browserrr 
+//And launching urlll 
+//When User register into application with username and passworddd
