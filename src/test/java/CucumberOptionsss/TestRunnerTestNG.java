@@ -22,7 +22,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 public class TestRunnerTestNG extends AbstractTestNGCucumberTests {
 	
 	
-}
+
 
   Scenario: Login Validation
 Given Initialize browser "chrome"
@@ -31,3 +31,4 @@ And click on login link
 When User login into application with "qwwrtusername" and "0987"
 Then Home page is displayed 
 
+	}
