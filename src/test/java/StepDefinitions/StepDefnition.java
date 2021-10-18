@@ -88,7 +88,7 @@ public class StepDefnition extends ActionUtilities {
 	
 	@When("^User register into application with username and password$")
 	//@Screenshots(afterEachStep=true)
-	//@Pending
+	@Pending
 	public void user_register_into_application_with_username_and_password() throws Exception {
 
 		DataXMLHandler A1 = new DataXMLHandler();
@@ -103,7 +103,7 @@ public class StepDefnition extends ActionUtilities {
 	}
 	
 	
-	//@Pending
+	@Pending
 	 public void checkSignIn(String username, String password) throws Exception {
 		
 		SignUpPage su = new SignUpPage(driver);
@@ -161,7 +161,7 @@ public class StepDefnition extends ActionUtilities {
 	}
 
 	
-	//@Pending
+	@Pending
 
 	 private String getDate() {
 
