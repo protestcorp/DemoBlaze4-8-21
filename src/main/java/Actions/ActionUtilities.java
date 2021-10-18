@@ -28,7 +28,7 @@ import net.thucydides.junit.annotations.TestData;
 
 
 
-public class ActionUtilities //extends Base  
+public class ActionUtilities extends Base  
 {
 	@Managed(driver = "chrome")
     public WebDriver driver;
