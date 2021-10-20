@@ -23,18 +23,13 @@ public class TestRunnerTestNG extends AbstractTestNGCucumberTests {
 	
 }
 
-
-@Given 
-Initialize browser "chrome"
-@And 
-	launching url "demoblaze"
-@And 
-	click on login link
-@When 
-User login into application with "qwwrtusername" and "0987"
-@Then 
-	Home page is displayed
-	}
+Scenario: Login Validation
+Given Initialize browser "chrome"
+And launching url "demoblaze"
+And click on login link
+When User login into application with "qwwrtusername" and "0987"
+Then Home page is displayed
+	
 
 
 
