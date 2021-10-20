@@ -523,7 +523,7 @@ public class StepDefnition extends ActionUtilities {
 
 	}
 	
-	@Given("Initialize browserrr ")
+	/*@Given("Initialize browserrr ")
     public void initialize_browserrr() throws IOException, InterruptedException {
 		//driver = initializeDriver();
 		Serenity.takeScreenshot();
@@ -624,4 +624,4 @@ public class StepDefnition extends ActionUtilities {
 
 	}
 	
-}
+}*/
