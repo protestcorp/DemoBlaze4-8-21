@@ -522,6 +522,7 @@ public class StepDefnition extends ActionUtilities {
 		
 
 	}
+}
 	
 	/*@Given("Initialize browserrr ")
     public void initialize_browserrr() throws IOException, InterruptedException {
