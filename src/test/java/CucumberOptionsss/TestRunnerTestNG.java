@@ -19,10 +19,10 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 		
 		)
 //@Listeners(CucumberOptionsss.TestJiraListener.class)
-//public class TestRunnerTestNG extends AbstractTestNGCucumberTests {
+public class TestRunnerTestNG extends AbstractTestNGCucumberTests {
 
 	
-//}
+}
 
   Scenario: Login Validation
 Given Initialize browser "chrome"
